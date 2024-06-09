@@ -27,21 +27,21 @@ Our data decompression and screenshot generation program can be found
   here</a>.
 
 
-<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
-  <div style="display: inline-block; vertical-align: bottom;">
-    <img src="./media/Image_001.jpg" style="width:auto;height:2in"/>
-    <!-- <span class="caption"> </span> -->
-  </div>
-  <div style="display: inline-block; vertical-align: bottom;">
-    <img src="./media/Image_002.jpg" style="width:auto;height:2in" />
-    <!-- <span class="caption"> </span> -->
-  </div>
-</div>
+# <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
+#   <div style="display: inline-block; vertical-align: bottom;">
+#     <img src="./media/Image_001.jpg" style="width:auto;height:2in"/>
+#     <!-- <span class="caption"> </span> -->
+#   </div>
+#   <div style="display: inline-block; vertical-align: bottom;">
+#     <img src="./media/Image_002.jpg" style="width:auto;height:2in" />
+#     <!-- <span class="caption"> </span> -->
+#   </div>
+# </div>
 
 <h2>Video Demo</h2>
 <div style="text-align:center;margin:auto;max-width:560px">
   <div style="padding-bottom:56.25%;position:relative;height:0;">
-    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/watch?v=4CK4W5hTfbQ&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://youtu.be/4CK4W5hTfbQ?si=tIwSSQMECXM4uBPO" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 '
@@ -87,22 +87,7 @@ There are various stargazing apps available on the App Store that perform the sa
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 400px;">
-    As shown in the system flowchart, we use one of the CC3200 boards for
-    the closed feedback loop for maintaining concentration in the
-    environment. The board will read values with I2C protocol through an ADC
-    which reads values from the thermistor and the TDS meter sensor. The
-    board will also periodically read user-defined thresholds from the AWS
-    cloud using RESTful APIs. When the sensory values read outside of the
-    user-defined thresholds, the board will activate the motor control
-    function to pump either water or nutrient solution to bring the
-    concentration back within the thresholds. Meanwhile, another CC3200
-    board is frequently reading from the AWS cloud to present the current
-    TDS reading and user-defined threshold to the user on an OLED through
-    SPI protocols. To adjust the thresholds, the user can either do it
-    remotely or locally by using a TV remote to type the number into the IR
-    receiver. The adjustments will be updated to the AWS and if the user
-    updates remotely, the local CC3200 board will update the values in the
-    next synchronization.
+
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
@@ -116,20 +101,7 @@ There are various stargazing apps available on the App Store that perform the sa
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 300px;">
-    Our system works based on the following state diagram. The device will
-    periodically monitor the temperature and the electrical conductivity
-    (EC) of the solution and convert the values into a TDS value using a
-    calibration curve. At the same time, the device will check for threshold
-    inputs, both over the AWS shadow and via manual input on the IR
-    receiver. It will compare the TDS with the lower and upper thresholds
-    set by the user. If the value is within the thresholds, it will stay in
-    the rest state. If the TDS is higher than the upper thresholds, it will
-    go to the water state and activate the water pump until the PPM is lower
-    than the upper thresholds and go back to the rest state. If the PPM is
-    lower than the lower thresholds, it will go to the nutrient state and
-    activate the nutrient pump until the PPM is higher than the lower
-    thresholds and go back to the rest state. In each state, the device will
-    periodically post the TDS.
+
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
@@ -143,20 +115,6 @@ There are various stargazing apps available on the App Store that perform the sa
 
 ### CC3200-LAUNCHXL Evaluation Board
 
-All control and logic was handled by two CC3200 microcontroller units,
-one each for the Master and Slave device. On the master device, it was
-responsible for decoding IR inputs from the remote to allow the user to
-input thresholds to be sent over AWS. The board’s SPI functionality,
-using the TI SPI library, was used to interface with the OLED display.
-The MCU is WiFi enabled, allowing a remote connection between the two
-boards.
-
-On the slave device, the microcontroller was responsible for the same
-functionalities as above, in addition to the TDS reading and control.
-This includes interfacing with the ADC over the I2C bus, reading 
-thresholds over HTTP from the AWS device shadow, writing the reported 
-TDS to the device shadow, and activating the two pumps using the 
-BJT control circuit.
 
 ## Functional Blocks: Master
 
@@ -164,17 +122,13 @@ BJT control circuit.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
   <div style='display: inline-block; vertical-align: top;flex:1 0 200px'>
-    The AWS IoT core allows our devices to communicate with each other
-    asynchronously. The master device can update the desired thresholds, and
-    the slave device will read them and synchronize them to the reported
-    state. The slave device will also post the TDS and temperature readings
-    periodically.
+
   </div>
   <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
+    <!-- <div class="fig">
       <img src="./media/Image_007.jpg" style="width:auto;height:2.5in" />
       <span class="caption">Device Shadow JSON</span>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -182,16 +136,13 @@ BJT control circuit.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
   <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    On both Master and Slave devices, the user can view the current TDS and
-    temperature of the plant solution on an OLED display. The user can also
-    use the display to view and edit the TDS thresholds. The CC3200 uses the
-    SPI bus to communicate with the display module.
+
   </div>
   <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
+    <!-- <div class="fig">
       <img src="./media/Image_008.jpg" style="width:auto;height:2in" />
       <span class="caption">OLED Wiring Diagram</span>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -199,154 +150,24 @@ BJT control circuit.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
   <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    On both the Master and Slave devices, a user can input the TDS
-    thresholds using a TV remote. These TV remotes use the NEC code format
-    with a carrier frequency of 38KHz. The Vishay IR receiver is connected
-    to Pin 62 of the CC3200, which is configured as a GPIO input pin. Each
-    positive edge of the signal triggers an interrupt in the main program,
-    storing the pulse distances into a buffer, and allowing us to decode the
-    inputs (1-9, delete and enter). The IR receiver is connected to VCC
-    through a resistor and a capacitor to filter any ripples.
+
   </div>
   <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
+    <!-- <div class="fig">
       <img src="./media/Image_009.jpg" style="width:auto;height:2in" />
       <span class="caption">IR Receiver Wiring Diagram</span>
-    </div>
+    </div> -->
   </div>
 </div>
 
-## Functional Blocks: Slave
-
-The slave device contains all the functional blocks from the master
-device, plus the following:
-
-### Analog-To-Digital Converter (ADC) Board
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    The outputs from the thermistor and TDS sensor board are
-    in the form of analog voltages, which need to be converted to digital
-    values to be usable in our program. We chose the AD1015 breakout board
-    from Adafruit, which sports 4-channels and 12 bits of precision. We
-    ended up using only 2 channels, so there is a potential for even more
-    cost savings. The ADC board supports I2C communication, which we can use
-    to request and read the two channel voltages. 
-    The <a href="https://cdn-shop.adafruit.com/datasheets/ads1015.pdf">
-    product datasheet</a> contains the necessary configuration values
-    and register addresses for operation.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_010.jpg" style="width:auto;height:2in" />
-      <span class="caption">ADC Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-### Thermistor
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 300px;'>
-    Conductivity-based TDS measurements are sensitive to temperature. To
-    allow accurate TDS measurements in a variety of climates and seasons,
-    temperature compensation calculations must be performed. To measure the
-    temperature, we use an NTC thermistor connected in a voltage divider
-    with a 10k resistor. The voltage across the resistor is read by the ADC
-    and converted to temperature using the equation provided by the
-    thermistor datasheet.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_011.jpg" style="width:auto;height:2in" />
-      <span class="caption">Thermistor Circuit Diagram</span>
-    </div>
-  </div>
-</div>
-
-### TDS Sensor Board
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 500px'>
-    In our first attempt to measure TDS, we used a simple two-probe analog
-    setup with a voltage divider. We soon found out that this was a naïve
-    approach (see Challenges). Consequently, we acquired a specialty TDS
-    sensing board from CQRobot, which generates a sinusoidal pulse and
-    measures the voltage drop to give a highly precise voltage to the ADC.
-    The MCU can then convert this voltage to a TDS value using the equation
-    provided by the device datasheet. We calibrated the TDS readings using a
-    standalone TDS sensor pen. After calibration and setting up the curves
-    for temperature compensation, we were able to achieve TDS readings
-    accurate to within 5% of the TDS sensor pen.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 600px'>
-    <div class="fig">
-      <img src="./media/Image_012.jpg" style="width:auto;height:2in;padding-top:30px" />
-      <span class="caption">TDS Sensor Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-### Pumps and Control Circuit
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 500px'>
-    The CC3200 is unable to provide sufficient power to drive the pumps,
-    which need 100mA of current each. Therefore, we used an external power
-    source in the form of 2 AA batteries for each pump motor. To allow the
-    CC3200 to turn on/off the motors, we designed a simple amplifier using a
-    Common Emitter topology. When the control pin is asserted HIGH, the BJT
-    will allow current to flow from 3V to ground through the pump motor.
-    Conversely, if the control signal is LOW, the BJT will not allow current
-    to flow in the motor. For each motor, there is a reverse-biased diode
-    connected across it. This protects our circuit from current generated by
-    the motor if it is spun from external force or inertia.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 600px'>
-    <div class="fig">
-      <img src="./media/Image_013.jpg" style="width:auto;height:2in;padding-top:30px" />
-      <span class="caption">Pump Circuit Diagrams</span>
-    </div>
-  </div>
-</div>
 
 # Challenges
 
-The most significant challenge we faced while developing this prototype
-was of inaccurate and inconsistent Electrical Conductivity (EC)
-measurements. This occurred due to two reasons: probe channel
-polarization and current limitations of GPIO pins.
 
-## Probe Channel Polarization
 
-Our first design for the probe was simply two copper rods, which would
-add as electrodes. This probe would be connected in series with a
-1000-ohm resistor to act as a voltage divider. We would simply connect
-the probe to VCC and measure the voltage divider through the ADC,
-allowing us to calculate the EC. However, when we used the probe for a
-few minutes, we realized that the EC value would continue to rise. This
-is because the DC current causes an ionized channel to build up between
-the two electrodes in the water. This cause inconsistent EC readings as
-time goes on.
 
-## Current Limitation of GPIO Pins
+## Current Limitation
 
-Our next idea was to try using the GPIO pins to power the probe, since
-we can turn it off when not needed, preventing excessive polarization.
-However, the GPIO pins are current limited, and any control circuit with
-a transistor would introduce extra voltage drops. Therefore, the simple
-two-probe implementation was not feasible.
-
-## Solution to Challenges
-
-We realized that using DC current to measure EC was not feasible.
-Therefore, we purchased a standalone EC measurement board from CQRobot.
-This inexpensive solution (\$8) used a low-voltage, low-current AC
-signal to prevent polarization. The board would convert the AC voltage
-drop across the solution to a DC analog voltage, which would then be
-read by our ADC. After calibrating the setup using a commercial TDS pen,
-the results were accurate within 3%, and would not drift by more than
-0.5% over time.
 
 # Future Work
 
