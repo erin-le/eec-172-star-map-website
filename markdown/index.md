@@ -3,12 +3,12 @@ title: 'NutriSense: Automated Hydroponics Dosing System'
 author: '**Kushagra Tiwari and Shengmin Liu** (website template by Ryan Tsang)'
 date: '*EEC172 WQ24*'
 
-subtitle: '<blockquote><b>EEC172 Final Project Webpage Example</b><br/>
-Note to current students: this is an <i>example</i> webpage and
-may not fulfill all stated requirements of the current quarter''s 
-assignment.<br/>The website source is hosted 
-<a href="https://github.com/ucd-eec172/project-website-example">on github</a>.
-</blockquote>'
+# subtitle: '<blockquote><b>EEC172 Final Project Webpage Example</b><br/>
+# Note to current students: this is an <i>example</i> webpage and
+# may not fulfill all stated requirements of the current quarter''s 
+# assignment.<br/>The website source is hosted 
+# <a href="https://github.com/ucd-eec172/project-website-example">on github</a>.
+# </blockquote>'
 
 toc-title: 'Table of Contents'
 abstract-title: '<h2>Description</h2>'
@@ -41,7 +41,7 @@ Our data decompression and screenshot generation program can be found
 <h2>Video Demo</h2>
 <div style="text-align:center;margin:auto;max-width:560px">
   <div style="padding-bottom:56.25%;position:relative;height:0;">
-    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://youtu.be/4CK4W5hTfbQ?si=tIwSSQMECXM4uBPO" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4CK4W5hTfbQ?si=0aQBXdd3ysT_JZh3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 '
