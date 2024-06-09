@@ -12,23 +12,20 @@ assignment.<br/>The website source is hosted
 
 toc-title: 'Table of Contents'
 abstract-title: '<h2>Description</h2>'
-abstract: 'Hydroponics is a technique where plants are grown in a nutrient-rich
-solution. This soil- free technique has been gaining traction recently
-due to its ability to optimize resource utilization. However, since
-plants are highly sensitive to changes in TDS, hydroponic setups require
-continuous TDS monitoring and adjustment. NutriSense, our device, allows
-hobbyists to achieve ideal hydroponics results on a small scale. It
-continuously monitors TDS and temperature, allowing the user to remotely
-read the status over AWS IoT cloud. The user can remotely enter upper
-and lower thresholds for TDS, and the device will automatically add
-nutrient solution or water to keep the TDS bounded by the thresholds.
-The device can also be configured to send notifications over SNS when
-the TDS value goes outside thresholds.
+abstract: 'Stargazing is the practice of observing and identifying celestial objects in the night sky, often done for enjoyment.
+However, beginner stargazers often struggle to locate the stars in the night sky. Our project assists stargazers with this by providing a live view of the sky and star location at a particular location and time.
+The user can input their time, location (in longitude and latitude), and date to calibrate their view, then tilt the CC3200 microcontroller to see what is upward from a particular direction of the tilt direction. The user can also take a screenshot of the OLED display by pressing MUTE on their remote, which will send the compressed image data to email via Amazon Web Services. The user can then paste this data into a Python program which we implemented and hosted on Replit to decompress the data and convert it into a black and white image.
 <br/><br/>
 Our source code can be found 
 <!-- replace this link -->
-<a href="https://github.com/ucd-eec172/project-website-example">
-  here (placeholder)</a>.
+<a href="https://github.com/PaggieZ/EEC172_Star_Detector">
+  here</a>.
+
+Our data decompression and screenshot generation program can be found 
+
+<a href="https://replit.com/@PassingBot/Starmapdecoder">
+  here</a>.
+
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
   <div style="display: inline-block; vertical-align: bottom;">
@@ -44,7 +41,7 @@ Our source code can be found
 <h2>Video Demo</h2>
 <div style="text-align:center;margin:auto;max-width:560px">
   <div style="padding-bottom:56.25%;position:relative;height:0;">
-    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/wSRtnAEZhmc?si=3vQXNj4h0WkW-F-q" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/watch?v=4CK4W5hTfbQ&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 '
@@ -55,17 +52,8 @@ Our source code can be found
 
 # Market Survey
 
-There are two types of similar product on the market. The first one is
-products from AeroGarden. Their products allow users to grow plants in
-nutrient solutions in a limited amount of usually 5 to 10. Compared with
-this product, our product provides an automated system for nutrient
-control that ensures the plant always has the correct amount of
-nutrients needed to avoid excess or insufficient nutrients. The other
-product is an expensive commercial system for horticulture aiming for a
-large scale of growth. Compared with this one, our product has the
-advantage of being cheap and small-scale which is more suitable for
-individual hobbyists to explore hydroponics.
-
+There are various stargazing apps available on the App Store that perform the same function as our program. There are also physical star maps that are available for purchase, which require some amount of calibration and knowledge to be used effectively. Our project offers an in-between option, as it does not require users to have a phone and does not use a GPS module, but still handles the calibration steps for the users after the receiving location, date, and time from the user.
+<!-- 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
     <img src="./media/Image_003.jpg" style="width:auto;height:200"/>
@@ -91,7 +79,7 @@ individual hobbyists to explore hydroponics.
     </ul>
     </span>
   </div>
-</div>
+</div> -->
 
 # Design
 
