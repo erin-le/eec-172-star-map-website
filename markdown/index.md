@@ -87,6 +87,7 @@ There are various stargazing apps available on the App Store that perform the sa
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 400px;">
+  
 
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
@@ -101,6 +102,13 @@ There are various stargazing apps available on the App Store that perform the sa
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 300px;">
+  First, the application displays prompts asking for the location in longitude and latitude, time, and date on the OLED. After each prompt, the user can input the information with the number keys (0-9) on the AT&T remote control. 
+
+  Next, the application loads data for the stars’ locations. The data it reads includes the name of the star for identification, as well as its location in celestial coordinates. 
+
+  After the program reads in the user input and celestial coordinate data, it performs various calculations to calibrate the location of the stars displayed on the OLED to the user’s location and inputted time. 
+
+  Next, the OLED begins to display stars. The display continuously updates based on readings from the accelerometer on the CC3200 LaunchPad microcontroller. If the user wants to take a screenshot of what is displayed on the OLED, they can press the “MUTE” button of the remote control to send a compressed message from the CC3200 to email via AWS. After that, they can feed the compressed data into an external Python program that we implemented to convert it back into a black-and-white image.
 
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
