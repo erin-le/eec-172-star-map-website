@@ -29,7 +29,7 @@ Our data decompression and screenshot generation program can be found
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure1: Project Overview</span>
     </div>
 </div>
 
@@ -90,7 +90,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/system_architecture.JPG" style="width:90%;height:auto;" />
-      <span class="caption">System Flowchart</span>
+      <span class="caption"> Figure2: System Architecture</span>
     </div>
   </div>
 </div>
@@ -104,7 +104,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/CC3200_board.JPG" style="width:90%;height:auto;" />
-      <span class="caption">System Flowchart</span>
+      <span class="caption">Figure3: CC3200 LaunchPad</span>
     </div>
   </div>
 </div>
@@ -177,10 +177,10 @@ There are various stargazing apps available on the App Store that perform the sa
 # Implementation
 
 ## Reading in User Input
-
+<div>
 For the initial step of receiving user input, we used code we had written from previous labs. This includes code such as the GPIO and SysTick interrupts for reading in IR sensor output, the code for registering these interrupts, and code for outputting messages to the OLED screen. The user input we received was the user’s location in longitude and latitude, the current date in days, months, and years, and the current time in hours and minutes. We did not implement a multitap system, so the user is only allowed to input numbers. 
 Since longitude and latitude values can be negative, with latitude ranging from -90 to 90 and longitude from -180 to 180, we separate the inputs for longitude and latitude into two parts: one for the absolute value, the other for the sign. After receiving user input, the values are stored in global variables as floats.
-
+</div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_time.jpg" style="width:90%;height:auto;" />
@@ -195,16 +195,19 @@ Since longitude and latitude values can be negative, with latitude ranging from 
   </div>
 
 ## Loading in Star Coordinate Data
-
+<div>
 Next, the program loads the data for the star’s locations in the Equatorial Coordinate System. When running the program using CCS’s debug mode, we used a CSV file to store the data. However, for the final flashed program, we hardcoded the values as strings within the main file. 
 
 Celestial coordinates in the Equatorial Coordinate System are expressed as right ascension (RA), which represents longitude, and declination (Dec), which represents latitude. Right ascension is often expressed using hours, minutes, and seconds, ranging from 0 to 24 hours. Declination is often expressed as degrees, arcminutes, and arcseconds, with an arcminute being 1/60th of a degree and an arcsecond being 1/60th of an arcminute. The range is from +90 to -90 degrees. These coordinates represent the stars’ position relative to a fixed location, so they do not change with a viewer’s location and current time.
 In the program, the stars’ location is stored as six values, with hours, minutes, and seconds for right ascension, and degrees, arcminutes, and arcseconds for declination. 
+</div>
 
 ## Calibration
 
 ### Calibration: Converting to decimal degrees
+<div>
 After reading and storing the values in a struct, the program converts the RA and Dec values from three separate values to one single value, expressed as a float. For RA, we convert the hour and minute values to seconds, divide this value by 24 hours in seconds, and multiply by 360 to convert to degrees. For Dec, we divide the arcminute value by 60 and the arcsecond value by 3600, then add the values to the degrees value.
+</div>
 
 ### Calibration: Converting from RA and Dec to AZ and altitude
 Next, we convert the RA and Dec values to azimuth (AZ) and altitude (Alt) values. These values represent what a viewer would see from a location at a particular time. Azimuth is analogous to RA and longitude, and altitude is analogous to latitude and Dec. In order to do this, the program calculates several intermediate values. The first of these intermediate values is the number of days, including hours as a fraction of a day, since J2000, which is noon on January 1st, 2000 in the GMT time zone. This was done using the time library in C.

@@ -38,7 +38,7 @@ it into a black and white image. <br/><br/> Our source code can be found
 <a href="https://github.com/PaggieZ/EEC172_Star_Detector"> here</a>. Our
 data decompression and screenshot generation program can be found
 <a href="https://replit.com/@PassingBot/Starmapdecoder"> here</a>.<br />
-<div style="display:inline-block;vertical-align:top;flex:0 0 500px"> <div class="fig"> <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" /> <span class="caption">State Diagram</span> </div> </div>
+<div style="display:inline-block;vertical-align:top;flex:0 0 500px"> <div class="fig"> <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" /> <span class="caption">Figure1: Project Overview</span> </div> </div>
 <h2>Video Demo</h2> <div style="text-align:center;margin:auto;max-width:560px"> <div style="padding-bottom:56.25%;position:relative;height:0;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/4CK4W5hTfbQ?si=0aQBXdd3ysT_JZh3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div> </div> 
 </div>
 </header>
@@ -155,7 +155,7 @@ screenshots from CC3200 and send them to the user’s email.</p>
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/system_architecture.JPG" style="width:90%;height:auto;" />
-      <span class="caption">System Flowchart</span>
+      <span class="caption"> Figure2: System Architecture</span>
     </div>
   </div>
 </div>
@@ -170,7 +170,7 @@ Microcontroller</h3>
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/CC3200_board.JPG" style="width:90%;height:auto;" />
-      <span class="caption">System Flowchart</span>
+      <span class="caption">Figure3: CC3200 LaunchPad</span>
     </div>
   </div>
 </div>
@@ -278,19 +278,10 @@ image.</p>
 
 <h1 id="implementation">Implementation</h1>
 <h2 id="reading-in-user-input">Reading in User Input</h2>
-<p>For the initial step of receiving user input, we used code we had
-written from previous labs. This includes code such as the GPIO and
-SysTick interrupts for reading in IR sensor output, the code for
-registering these interrupts, and code for outputting messages to the
-OLED screen. The user input we received was the user’s location in
-longitude and latitude, the current date in days, months, and years, and
-the current time in hours and minutes. We did not implement a multitap
-system, so the user is only allowed to input numbers. Since longitude
-and latitude values can be negative, with latitude ranging from -90 to
-90 and longitude from -180 to 180, we separate the inputs for longitude
-and latitude into two parts: one for the absolute value, the other for
-the sign. After receiving user input, the values are stored in global
-variables as floats.</p>
+<div>
+For the initial step of receiving user input, we used code we had written from previous labs. This includes code such as the GPIO and SysTick interrupts for reading in IR sensor output, the code for registering these interrupts, and code for outputting messages to the OLED screen. The user input we received was the user’s location in longitude and latitude, the current date in days, months, and years, and the current time in hours and minutes. We did not implement a multitap system, so the user is only allowed to input numbers. 
+Since longitude and latitude values can be negative, with latitude ranging from -90 to 90 and longitude from -180 to 180, we separate the inputs for longitude and latitude into two parts: one for the absolute value, the other for the sign. After receiving user input, the values are stored in global variables as floats.
+</div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_time.jpg" style="width:90%;height:auto;" />
@@ -306,11 +297,9 @@ variables as floats.</p>
 
 <h2 id="loading-in-star-coordinate-data">Loading in Star Coordinate
 Data</h2>
-<p>Next, the program loads the data for the star’s locations in the
-Equatorial Coordinate System. When running the program using CCS’s debug
-mode, we used a CSV file to store the data. However, for the final
-flashed program, we hardcoded the values as strings within the main
-file.</p>
+<div>
+Next, the program loads the data for the star’s locations in the Equatorial Coordinate System. When running the program using CCS’s debug mode, we used a CSV file to store the data. However, for the final flashed program, we hardcoded the values as strings within the main file. 
+
 <p>Celestial coordinates in the Equatorial Coordinate System are
 expressed as right ascension (RA), which represents longitude, and
 declination (Dec), which represents latitude. Right ascension is often
@@ -323,16 +312,15 @@ not change with a viewer’s location and current time. In the program,
 the stars’ location is stored as six values, with hours, minutes, and
 seconds for right ascension, and degrees, arcminutes, and arcseconds for
 declination.</p>
+</div>
+
 <h2 id="calibration">Calibration</h2>
 <h3 id="calibration-converting-to-decimal-degrees">Calibration:
 Converting to decimal degrees</h3>
-<p>After reading and storing the values in a struct, the program
-converts the RA and Dec values from three separate values to one single
-value, expressed as a float. For RA, we convert the hour and minute
-values to seconds, divide this value by 24 hours in seconds, and
-multiply by 360 to convert to degrees. For Dec, we divide the arcminute
-value by 60 and the arcsecond value by 3600, then add the values to the
-degrees value.</p>
+<div>
+After reading and storing the values in a struct, the program converts the RA and Dec values from three separate values to one single value, expressed as a float. For RA, we convert the hour and minute values to seconds, divide this value by 24 hours in seconds, and multiply by 360 to convert to degrees. For Dec, we divide the arcminute value by 60 and the arcsecond value by 3600, then add the values to the degrees value.
+</div>
+
 <h3
 id="calibration-converting-from-ra-and-dec-to-az-and-altitude">Calibration:
 Converting from RA and Dec to AZ and altitude</h3>
