@@ -220,12 +220,6 @@ received data from the peripheral to the controller. The SCLK line keeps
 track of the clock signal, and the CS line enables a peripheral for
 communication.</p>
   </div>
-  <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
-      <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
-    </div>
-  </div>
 </div>
 
 <h3 id="on-board-accelerometer">On-board Accelerometer</h3>
@@ -383,6 +377,20 @@ variables. We then convert from polar into rectangular coordinates,
 which can be directly used by the OLED. The scale factor used in the
 radius equation was set so that the rectangular coordinates have a range
 greater than the OLED’s dimensions.</p>
+<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+    <div class="fig">
+      <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
+      <span class="caption">OLED Wiring Diagram</span>
+    </div>
+  </div>
+
+<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+    <div class="fig">
+      <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
+      <span class="caption">OLED Wiring Diagram</span>
+    </div>
+  </div>
+
 <h2 id="rendering-the-star-chart">Rendering the star chart</h2>
 <p>We calculate which stars should be displayed on the OLED by keeping
 track of the position of the top left corner of the OLED, looping

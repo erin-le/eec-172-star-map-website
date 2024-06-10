@@ -128,12 +128,6 @@ There are various stargazing apps available on the App Store that perform the sa
   
   SPI stands for Serial Peripheral Interface. It generally requires 4 wires for communication: COPI, CIPO, SCLK, and CS. The COPI (MOSI) line sends data from the controller to the peripheral. The CIPO (MISO) line received data from the peripheral to the controller. The SCLK line keeps track of the clock signal, and the CS line enables a peripheral for communication. 
   </div>
-  <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
-      <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
-    </div>
-  </div>
 </div>
 
 ### On-board Accelerometer
@@ -237,6 +231,20 @@ theta = azimuth
 ```
 We used arbitrary values for the radius of the sphere and scale variables.
 We then convert from polar into rectangular coordinates, which can be directly used by the OLED. The scale factor used in the radius equation was set so that the rectangular coordinates have a range greater than the OLED’s dimensions. 
+
+<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+    <div class="fig">
+      <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
+      <span class="caption">OLED Wiring Diagram</span>
+    </div>
+  </div>
+
+<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+    <div class="fig">
+      <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
+      <span class="caption">OLED Wiring Diagram</span>
+    </div>
+  </div>
 
 ## Rendering the star chart
 
