@@ -121,7 +121,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/amazon_aws_shadow_state.JPG" style="width:auto;height:2.5in" />
-      <span class="caption">Device Shadow JSON</span>
+      <span class="caption">Figure4: Device Shadow JSON</span>
     </div>
   </div>
 </div>
@@ -169,12 +169,13 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/functional_specification.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure5: State Diagram</span>
     </div>
   </div>
 </div>
 
 # Implementation
+<p></p>
 
 ## Reading in User Input
 <div>
@@ -184,13 +185,13 @@ Since longitude and latitude values can be negative, with latitude ranging from 
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_time.jpg" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure6: Prompts For Date And Time</span>
     </div>
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_latitude_longitude.jpg" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure7: Prompts For Latitude And Longitude</span>
     </div>
   </div>
 
@@ -245,16 +246,16 @@ We then convert from polar into rectangular coordinates, which can be directly u
 <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
+      <span class="caption">Figure8: OLED Wiring Diagram</span>
     </div>
   </div>
 
-<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+<!-- <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
       <span class="caption">OLED Wiring Diagram</span>
     </div>
-  </div>
+  </div> -->
 
 ## Rendering the star chart
 
@@ -276,14 +277,14 @@ The user would have to paste the contents of the email into the data.txt file, t
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/email_message.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure9: Email Message</span>
     </div>
   </div>
 
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/python_output.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure10: Output of Python Script</span>
     </div>
   </div>
 

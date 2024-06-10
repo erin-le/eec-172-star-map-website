@@ -201,7 +201,7 @@ request. The SNS is what we use to send the message to our email.</p>
   <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/amazon_aws_shadow_state.JPG" style="width:auto;height:2.5in" />
-      <span class="caption">Device Shadow JSON</span>
+      <span class="caption">Figure4: Device Shadow JSON</span>
     </div>
   </div>
 </div>
@@ -271,12 +271,14 @@ image.</p>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/functional_specification.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure5: State Diagram</span>
     </div>
   </div>
 </div>
 
 <h1 id="implementation">Implementation</h1>
+<p></p>
+
 <h2 id="reading-in-user-input">Reading in User Input</h2>
 <div>
 For the initial step of receiving user input, we used code we had written from previous labs. This includes code such as the GPIO and SysTick interrupts for reading in IR sensor output, the code for registering these interrupts, and code for outputting messages to the OLED screen. The user input we received was the user’s location in longitude and latitude, the current date in days, months, and years, and the current time in hours and minutes. We did not implement a multitap system, so the user is only allowed to input numbers. 
@@ -285,13 +287,13 @@ Since longitude and latitude values can be negative, with latitude ranging from 
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_time.jpg" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure6: Prompts For Date And Time</span>
     </div>
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_latitude_longitude.jpg" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure7: Prompts For Latitude And Longitude</span>
     </div>
   </div>
 
@@ -367,16 +369,16 @@ greater than the OLED’s dimensions.</p>
 <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
+      <span class="caption">Figure8: OLED Wiring Diagram</span>
     </div>
   </div>
 
-<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+<!-- <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
       <span class="caption">OLED Wiring Diagram</span>
     </div>
-  </div>
+  </div> -->
 
 <h2 id="rendering-the-star-chart">Rendering the star chart</h2>
 <p>We calculate which stars should be displayed on the OLED by keeping
@@ -424,14 +426,14 @@ file, then run main.py.</p>
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/email_message.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure9: Email Message</span>
     </div>
   </div>
 
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/python_output.JPG" style="width:90%;height:auto;" />
-      <span class="caption">State Diagram</span>
+      <span class="caption">Figure10: Output of Python Script</span>
     </div>
   </div>
 
