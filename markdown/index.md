@@ -29,7 +29,7 @@ Our data decompression and screenshot generation program can be found
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure1: Project Overview</span>
+      <span class="caption">Figure0: Project Overview</span>
     </div>
 </div>
 
@@ -77,7 +77,12 @@ There are various stargazing apps available on the App Store that perform the sa
 </div> -->
 
 # Design
-
+<div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
+    <div class="fig">
+      <img src="./media/circuit_schematics.JPG" style="width:90%;height:auto;" />
+      <span class="caption"> Figure1: Circuit Schematic</span>
+    </div>
+  </div>
 ## System Architecture
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 400px;">
@@ -175,7 +180,7 @@ There are various stargazing apps available on the App Store that perform the sa
 </div>
 
 # Implementation
-
+<div>
 
 ## Reading in User Input
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
@@ -336,7 +341,7 @@ The software tools used were Code Composer Studio (CCS) and the CCS UniFlash uti
 </div>
 
 
-
+</div>
 
 # Challenges
 
