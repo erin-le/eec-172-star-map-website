@@ -83,6 +83,7 @@ There are various stargazing apps available on the App Store that perform the sa
       <span class="caption"> Figure1: Circuit Schematic</span>
     </div>
   </div>
+  
 ## System Architecture
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 400px;">

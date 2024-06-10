@@ -49,6 +49,9 @@ data decompression and screenshot generation program can be found
 Survey</a></li>
 <li><a href="#design" id="toc-design">Design</a>
 <ul>
+<li><a href="#system-architecture" id="toc-system-architecture">System
+Architecture</a>
+<ul>
 <li><a href="#cc3200-launchpad-microcontroller"
 id="toc-cc3200-launchpad-microcontroller">CC3200 LaunchPad
 Microcontroller</a></li>
@@ -60,6 +63,7 @@ id="toc-on-board-accelerometer">On-board Accelerometer</a></li>
 <li><a href="#vishay-tsop311xx-ir-receiver"
 id="toc-vishay-tsop311xx-ir-receiver">Vishay TSOP311xx IR
 Receiver</a></li>
+</ul></li>
 <li><a href="#functional-specification"
 id="toc-functional-specification">Functional Specification</a></li>
 </ul></li>
@@ -141,7 +145,8 @@ users after the receiving location, date, and time from the user.</p>
       <span class="caption"> Figure1: Circuit Schematic</span>
     </div>
   </div>
-## System Architecture
+
+<h2 id="system-architecture">System Architecture</h2>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 400px;">
   Looking at the overall architecture, the system comprises 5 parts in total. The center of the system is the CC3200-LAUNCHXL microcontroller from Texas Instrument which connects all components together. The CC3200 is flashed with a C program that is in charge of coordinating the display on the OLED, reading and decoding input from the IR receiver and accelerometer, establishing a network connection with Amazon’s AWS for wireless communication, and performing calculations that are necessary for calibrating and displaying the star map.
