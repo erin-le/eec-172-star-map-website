@@ -175,10 +175,11 @@ There are various stargazing apps available on the App Store that perform the sa
 </div>
 
 # Implementation
-<p></p>
+
 
 ## Reading in User Input
-<div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
+  <div>
 For the initial step of receiving user input, we used code we had written from previous labs. This includes code such as the GPIO and SysTick interrupts for reading in IR sensor output, the code for registering these interrupts, and code for outputting messages to the OLED screen. The user input we received was the user’s location in longitude and latitude, the current date in days, months, and years, and the current time in hours and minutes. We did not implement a multitap system, so the user is only allowed to input numbers. 
 Since longitude and latitude values can be negative, with latitude ranging from -90 to 90 and longitude from -180 to 180, we separate the inputs for longitude and latitude into two parts: one for the absolute value, the other for the sign. After receiving user input, the values are stored in global variables as floats.
 </div>
@@ -195,8 +196,10 @@ Since longitude and latitude values can be negative, with latitude ranging from 
     </div>
   </div>
 
+</div>
+
 ## Loading in Star Coordinate Data
-<div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
 Next, the program loads the data for the star’s locations in the Equatorial Coordinate System. When running the program using CCS’s debug mode, we used a CSV file to store the data. However, for the final flashed program, we hardcoded the values as strings within the main file. 
 
 Celestial coordinates in the Equatorial Coordinate System are expressed as right ascension (RA), which represents longitude, and declination (Dec), which represents latitude. Right ascension is often expressed using hours, minutes, and seconds, ranging from 0 to 24 hours. Declination is often expressed as degrees, arcminutes, and arcseconds, with an arcminute being 1/60th of a degree and an arcsecond being 1/60th of an arcminute. The range is from +90 to -90 degrees. These coordinates represent the stars’ position relative to a fixed location, so they do not change with a viewer’s location and current time.
@@ -204,6 +207,7 @@ In the program, the stars’ location is stored as six values, with hours, minut
 </div>
 
 ## Calibration
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
 
 ### Calibration: Converting to decimal degrees
 <div>
@@ -246,23 +250,26 @@ We then convert from polar into rectangular coordinates, which can be directly u
 <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">Figure8: OLED Wiring Diagram</span>
+      <span class="caption">Figure8: Boots on OLED</span>
     </div>
   </div>
 
-<!-- <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
+      <span class="caption">Figure9: Boots on Phone</span>
     </div>
-  </div> -->
+  </div>
+
+</div>
 
 ## Rendering the star chart
-
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
 We calculate which stars should be displayed on the OLED by keeping track of the position of the top left corner of the OLED, looping through each of the Star structs and calculating their positions relative to the OLED, then drawing it if it is within the bounds of the OLED’s screen. 
 
 To update the position of the OLED screen, we read in x and y accelerometer readings. We update the position solely based on the last accelerometer reading, so the OLED displays exactly what is in the direction of the accelerometer tilt at any given time. 
 
+</div>
 
 ## Taking a screenshot
 To take a screenshot of the OLED, we first obtain the x-y coordinates of all the stars currently displayed on the screen. Then, we use a for loop with 128 iterations. In each iteration, we create a 128-byte character array to represent a row of the OLED display. We first fill in the 128-byte array with 0s to represent the background, then we check if the current row contains any stars based on the x-y coordinates. If there is, we replace the corresponding character in the array with a 1. Then, we feed this 128-byte character array into a function to convert it from binary form to hexadecimal form. The output of the conversion function is a 32-byte character array because each 4-byte binary is converted into a 1-byte hexadecimal character. After running through 128 iterations of the for loop, we have a 128x32 buffer in the form of a 4096-byte character array representing the compressed version of the OLED screenshot.
@@ -277,14 +284,14 @@ The user would have to paste the contents of the email into the data.txt file, t
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/email_message.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure9: Email Message</span>
+      <span class="caption">Figure10: Email Message</span>
     </div>
   </div>
 
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/python_output.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure10: Output of Python Script</span>
+      <span class="caption">Figure11: Output of Python Script</span>
     </div>
   </div>
 

@@ -277,10 +277,9 @@ image.</p>
 </div>
 
 <h1 id="implementation">Implementation</h1>
-<p></p>
-
 <h2 id="reading-in-user-input">Reading in User Input</h2>
-<div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
+  <div>
 For the initial step of receiving user input, we used code we had written from previous labs. This includes code such as the GPIO and SysTick interrupts for reading in IR sensor output, the code for registering these interrupts, and code for outputting messages to the OLED screen. The user input we received was the user’s location in longitude and latitude, the current date in days, months, and years, and the current time in hours and minutes. We did not implement a multitap system, so the user is only allowed to input numbers. 
 Since longitude and latitude values can be negative, with latitude ranging from -90 to 90 and longitude from -180 to 180, we separate the inputs for longitude and latitude into two parts: one for the absolute value, the other for the sign. After receiving user input, the values are stored in global variables as floats.
 </div>
@@ -297,9 +296,11 @@ Since longitude and latitude values can be negative, with latitude ranging from 
     </div>
   </div>
 
+</div>
+
 <h2 id="loading-in-star-coordinate-data">Loading in Star Coordinate
 Data</h2>
-<div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
 Next, the program loads the data for the star’s locations in the Equatorial Coordinate System. When running the program using CCS’s debug mode, we used a CSV file to store the data. However, for the final flashed program, we hardcoded the values as strings within the main file. 
 
 <p>Celestial coordinates in the Equatorial Coordinate System are
@@ -317,6 +318,8 @@ declination.</p>
 </div>
 
 <h2 id="calibration">Calibration</h2>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
+
 <h3 id="calibration-converting-to-decimal-degrees">Calibration:
 Converting to decimal degrees</h3>
 <div>
@@ -369,27 +372,29 @@ greater than the OLED’s dimensions.</p>
 <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">Figure8: OLED Wiring Diagram</span>
+      <span class="caption">Figure8: Boots on OLED</span>
     </div>
   </div>
 
-<!-- <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
+<div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
+      <span class="caption">Figure9: Boots on Phone</span>
     </div>
-  </div> -->
+  </div>
+
+</div>
 
 <h2 id="rendering-the-star-chart">Rendering the star chart</h2>
-<p>We calculate which stars should be displayed on the OLED by keeping
-track of the position of the top left corner of the OLED, looping
-through each of the Star structs and calculating their positions
-relative to the OLED, then drawing it if it is within the bounds of the
-OLED’s screen.</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
+We calculate which stars should be displayed on the OLED by keeping track of the position of the top left corner of the OLED, looping through each of the Star structs and calculating their positions relative to the OLED, then drawing it if it is within the bounds of the OLED’s screen. 
+
 <p>To update the position of the OLED screen, we read in x and y
 accelerometer readings. We update the position solely based on the last
 accelerometer reading, so the OLED displays exactly what is in the
 direction of the accelerometer tilt at any given time.</p>
+</div>
+
 <h2 id="taking-a-screenshot">Taking a screenshot</h2>
 <p>To take a screenshot of the OLED, we first obtain the x-y coordinates
 of all the stars currently displayed on the screen. Then, we use a for
@@ -426,14 +431,14 @@ file, then run main.py.</p>
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/email_message.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure9: Email Message</span>
+      <span class="caption">Figure10: Email Message</span>
     </div>
   </div>
 
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/python_output.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure10: Output of Python Script</span>
+      <span class="caption">Figure11: Output of Python Script</span>
     </div>
   </div>
 
