@@ -1,7 +1,7 @@
 ---
-title: 'NutriSense: Automated Hydroponics Dosing System'
-author: '**Kushagra Tiwari and Shengmin Liu** (website template by Ryan Tsang)'
-date: '*EEC172 WQ24*'
+title: 'Real Time Star Chart'
+author: '**Erin Le and Peggy Zhu** (website template by Ryan Tsang)'
+date: '*EEC172 SQ24*'
 
 # subtitle: '<blockquote><b>EEC172 Final Project Webpage Example</b><br/>
 # Note to current students: this is an <i>example</i> webpage and
@@ -26,6 +26,12 @@ Our data decompression and screenshot generation program can be found
 <a href="https://replit.com/@PassingBot/Starmapdecoder">
   here</a>.
 
+<div style="display:inline-block;vertical-align:top;flex:0 0 500px">
+    <div class="fig">
+      <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" />
+      <span class="caption">State Diagram</span>
+    </div>
+</div>
 
 <h2>Video Demo</h2>
 <div style="text-align:center;margin:auto;max-width:560px">
@@ -132,7 +138,8 @@ There are various stargazing apps available on the App Store that perform the sa
 
 ### On-board Accelerometer
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
+  <div>
+  <!-- style='display: inline-block; vertical-align: top;flex:1 0 400px' -->
   The BMA222 can report three 8-bit data values representing the acceleration measured in the x, y, and z directions. The microcontroller communicates with the BMA222 using the I2C protocol.
 
   I2C only requires 2 wires. I2C stands for Inter-Integrated Circuit. The SDA line transmits data bi-directionally. The SCK line keeps track of the clock signal. The SDA line goes down first before sending a message that claims the bus. After the master writes out a command, the slave sends out an ACK bit to confirm acknowledgment.
@@ -140,7 +147,7 @@ There are various stargazing apps available on the App Store that perform the sa
 
 ### Vishay TSOP311xx IR Receiver
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
+  <div>
   The IR receiver comes with 3 pins: power, ground, and output signal. To reduce the noise on the receiver, we put a low-pass filter on the power line, consisting of a resistor and a capacitor.
 
   The encoding method used between the remote control and the sensor is the NEC code. This method uses 32 bits in total, with bits 0-7 for the address, 8-15 as the inverse of the address, 16-23 for data, and 24-31 as the inverse of the data. 0’s are encoded as shorter high pulses, and 1’s are encoded as longer high pulses. We can perform checksum using the original data and the inverse of the data to make sure the received data is correct.
@@ -317,19 +324,7 @@ The software tools used were Code Composer Studio (CCS) and the CCS UniFlash uti
   </div>
 </div>
 
-### IR Receiver
 
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <!-- <div class="fig">
-      <img src="./media/Image_009.jpg" style="width:auto;height:2in" />
-      <span class="caption">IR Receiver Wiring Diagram</span>
-    </div> -->
-  </div>
-</div> -->
 
 
 # Challenges

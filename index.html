@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Kushagra Tiwari and Shengmin Liu (website template by Ryan Tsang)" />
-  <title>NutriSense: Automated Hydroponics Dosing System</title>
+  <meta name="author" content="Erin Le and Peggy Zhu (website template by Ryan Tsang)" />
+  <title>Real Time Star Chart</title>
   <!-- <link rel="stylesheet" type="text/css" href="assets/github-markdown-light.css" /> -->
   <link rel="stylesheet" href="assets/github-markdown-light.css" />
   <link rel="stylesheet" href="assets/style-customization.css" />
@@ -15,10 +15,10 @@
 </head>
 <article class="markdown-body">
 <header id="title-block-header">
-<h1 class="title">NutriSense: Automated Hydroponics Dosing System</h1>
-<p class="author"><strong>Kushagra Tiwari and Shengmin Liu</strong>
-(website template by Ryan Tsang)</p>
-<p class="date"><em>EEC172 WQ24</em></p>
+<h1 class="title">Real Time Star Chart</h1>
+<p class="author"><strong>Erin Le and Peggy Zhu</strong> (website
+template by Ryan Tsang)</p>
+<p class="date"><em>EEC172 SQ24</em></p>
 <div class="abstract">
 <div class="abstract-title"><h2>Description</h2></div>
 Stargazing is the practice of observing and identifying celestial
@@ -38,6 +38,7 @@ it into a black and white image. <br/><br/> Our source code can be found
 <a href="https://github.com/PaggieZ/EEC172_Star_Detector"> here</a>. Our
 data decompression and screenshot generation program can be found
 <a href="https://replit.com/@PassingBot/Starmapdecoder"> here</a>.<br />
+<div style="display:inline-block;vertical-align:top;flex:0 0 500px"> <div class="fig"> <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" /> <span class="caption">State Diagram</span> </div> </div>
 <h2>Video Demo</h2> <div style="text-align:center;margin:auto;max-width:560px"> <div style="padding-bottom:56.25%;position:relative;height:0;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/4CK4W5hTfbQ?si=0aQBXdd3ysT_JZh3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div> </div> 
 </div>
 </header>
@@ -88,10 +89,7 @@ Converting from AZ and Alt to x-y coordinates</a></li>
 <li><a href="#rendering-the-star-chart"
 id="toc-rendering-the-star-chart">Rendering the star chart</a></li>
 <li><a href="#taking-a-screenshot" id="toc-taking-a-screenshot">Taking a
-screenshot</a>
-<ul>
-<li><a href="#ir-receiver" id="toc-ir-receiver">IR Receiver</a></li>
-</ul></li>
+screenshot</a></li>
 </ul></li>
 <li><a href="#challenges" id="toc-challenges">Challenges</a></li>
 <li><a href="#future-work" id="toc-future-work">Future Work</a></li>
@@ -224,7 +222,8 @@ communication.</p>
 
 <h3 id="on-board-accelerometer">On-board Accelerometer</h3>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
+  <div>
+  <!-- style='display: inline-block; vertical-align: top;flex:1 0 400px' -->
   The BMA222 can report three 8-bit data values representing the acceleration measured in the x, y, and z directions. The microcontroller communicates with the BMA222 using the I2C protocol.
 
 <p>I2C only requires 2 wires. I2C stands for Inter-Integrated Circuit.
@@ -236,7 +235,7 @@ slave sends out an ACK bit to confirm acknowledgment.</p>
 
 <h3 id="vishay-tsop311xx-ir-receiver">Vishay TSOP311xx IR Receiver</h3>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
+  <div>
   The IR receiver comes with 3 pins: power, ground, and output signal. To reduce the noise on the receiver, we put a low-pass filter on the power line, consisting of a resistor and a capacitor.
 
 <p>The encoding method used between the remote control and the sensor is
@@ -487,19 +486,6 @@ The software tools used were Code Composer Studio (CCS) and the CCS UniFlash uti
 
   </div>
 </div>
-
-<h3 id="ir-receiver">IR Receiver</h3>
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <!-- <div class="fig">
-      <img src="./media/Image_009.jpg" style="width:auto;height:2in" />
-      <span class="caption">IR Receiver Wiring Diagram</span>
-    </div> -->
-  </div>
-</div> -->
 
 <h1 id="challenges">Challenges</h1>
 <p>One of the main challenges was figuring out how to perform the
