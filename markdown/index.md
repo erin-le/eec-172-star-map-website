@@ -29,7 +29,7 @@ Our data decompression and screenshot generation program can be found
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/project_overview_image.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure0: Project Overview</span>
+      <span class="caption">Figure 0: Project Overview</span>
     </div>
 </div>
 
@@ -80,7 +80,7 @@ There are various stargazing apps available on the App Store that perform the sa
 <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/circuit_schematics.JPG" style="width:90%;height:auto;" />
-      <span class="caption"> Figure1: Circuit Schematic</span>
+      <span class="caption"> Figure 1: Circuit Schematic</span>
     </div>
   </div>
   
@@ -96,7 +96,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/system_architecture.JPG" style="width:90%;height:auto;" />
-      <span class="caption"> Figure2: System Architecture</span>
+      <span class="caption"> Figure 2: System Architecture</span>
     </div>
   </div>
 </div>
@@ -110,7 +110,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
       <img src="./media/CC3200_board.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure3: CC3200 LaunchPad</span>
+      <span class="caption">Figure 3: CC3200 LaunchPad</span>
     </div>
   </div>
 </div>
@@ -127,7 +127,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/amazon_aws_shadow_state.JPG" style="width:auto;height:2.5in" />
-      <span class="caption">Figure4: Device Shadow JSON</span>
+      <span class="caption">Figure 4: Device Shadow JSON</span>
     </div>
   </div>
 </div>
@@ -175,7 +175,7 @@ There are various stargazing apps available on the App Store that perform the sa
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/functional_specification.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure5: State Diagram</span>
+      <span class="caption">Figure 5: State Diagram</span>
     </div>
   </div>
 </div>
@@ -192,13 +192,13 @@ Since longitude and latitude values can be negative, with latitude ranging from 
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_time.jpg" style="width:90%;height:auto;" />
-      <span class="caption">Figure6: Prompts For Date And Time</span>
+      <span class="caption">Figure 6: Prompts For Date And Time</span>
     </div>
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/prompt_latitude_longitude.jpg" style="width:90%;height:auto;" />
-      <span class="caption">Figure7: Prompts For Latitude And Longitude</span>
+      <span class="caption">Figure 7: Prompts For Latitude And Longitude</span>
     </div>
   </div>
 
@@ -213,6 +213,13 @@ In the program, the stars’ location is stored as six values, with hours, minut
 </div>
 
 ## Calibration
+<div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
+    <div class="fig">
+      <img src="./media/star_location.JPG" style="width:90%;height:auto;" />
+      <span class="caption"> Figure 8: Star Loacation Data</span>
+    </div>
+  </div>
+
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
 
 ### Calibration: Converting to decimal degrees
@@ -256,14 +263,14 @@ We then convert from polar into rectangular coordinates, which can be directly u
 <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_OLED.jpg" style="width:auto;height:2in" />
-      <span class="caption">Figure8: Boots on OLED</span>
+      <span class="caption">Figure 9: Boots on OLED</span>
     </div>
   </div>
 
 <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
     <div class="fig">
       <img src="./media/Boots_Phone.png" style="width:auto;height:2in" />
-      <span class="caption">Figure9: Boots on Phone</span>
+      <span class="caption">Figure 10: Boots on Phone</span>
     </div>
   </div>
 
@@ -290,14 +297,14 @@ The user would have to paste the contents of the email into the data.txt file, t
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/email_message.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure10: Email Message</span>
+      <span class="caption">Figure 11: Email Message</span>
     </div>
   </div>
 
 <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
       <img src="./media/python_output.JPG" style="width:90%;height:auto;" />
-      <span class="caption">Figure11: Output of Python Script</span>
+      <span class="caption">Figure 12: Output of Python Script</span>
     </div>
   </div>
 
